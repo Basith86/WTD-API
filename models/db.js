@@ -1,11 +1,12 @@
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.MONGODB_URI, (err) => {
-    if(!err) {
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true }).then(
+    (res) => {
         console.log("successful");
-    }
-    else
-    {console.log("unsuccesful");}
-});
+}
+).catch(() => {
+    console.log("unsuccessful");
+})
 
-require('./user.model')
+require('./user.model');
+require('./marketing.model');

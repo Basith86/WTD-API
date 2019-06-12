@@ -18,3 +18,13 @@ module.exports.register = (req,res,next) => {
         }
     })
 }
+
+module.exports.retriew = (req,res,next) => {
+    User.find({email: req.query.email}, (err,doc) => {
+        if(!err && doc.length>0){
+            res.send(doc);
+        } else {
+            res.send([{"error" : "86"}]);
+        }
+    })
+}
