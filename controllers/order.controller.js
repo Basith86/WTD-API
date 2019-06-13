@@ -9,6 +9,7 @@ module.exports.order = (req,res,err) => {
     order.type = req.body.type;
     order.address = req.body.address;
     order.payment = req.body.payment;
+    order.email = req.body.email;
     order.save((err,doc) => {
         if(!err){
             res.send(doc);

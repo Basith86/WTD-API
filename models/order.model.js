@@ -34,6 +34,9 @@ var orderSchema = new mongoose.Schema({
     },
     payment: {
         type: String
+    },
+    email: {
+        type: String
     }
 });
 
