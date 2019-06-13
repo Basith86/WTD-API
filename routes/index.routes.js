@@ -3,11 +3,12 @@ const router = express.Router();
 
 const ctrlUSer = require('../controllers/user.controller');
 const ctrlMarket = require('../controllers/marketing.controller');
-
+const ctrlOrder = require('../controllers/order.controller');
 
 
 router.post('/register', ctrlUSer.register);
 router.post('/marketing', ctrlMarket.marketing);
+router.post('/order', ctrlOrder.order);
 
 router.get('/get', ctrlUSer.retriew)
 
