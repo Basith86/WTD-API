@@ -16,3 +16,11 @@ module.exports.order = (req,res,err) => {
         }
     })
 }
+
+module.exports.dashboard = (req,res,err) => {
+    Order.find({email: req.query.email},(err,doc) => {
+        if(!err){
+            res.send(doc);
+        }
+    })
+}

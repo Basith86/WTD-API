@@ -10,7 +10,8 @@ router.post('/register', ctrlUSer.register);
 router.post('/marketing', ctrlMarket.marketing);
 router.post('/order', ctrlOrder.order);
 
-router.get('/get', ctrlUSer.retriew)
+router.get('/get', ctrlUSer.retriew);
+router.get('/dashboard', ctrlOrder.dashboard);
 
 router.put('/testing/:id', function(req, res){
         var name = req.body.name    
