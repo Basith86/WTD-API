@@ -11,3 +11,4 @@ mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true }).then(
 require('./user.model');
 require('./marketing.model');
 require('./order.model');
+require('./contact.model');
